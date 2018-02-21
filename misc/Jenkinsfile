@@ -12,6 +12,6 @@ node {
      }
    }
    stage('docker build/push') {
-            def app = docker.build("docker-nodejs:${commit_id}", '.').push()
+            def app = docker.build("nodejs:${commit_id}", '.').push()
    }
 }
